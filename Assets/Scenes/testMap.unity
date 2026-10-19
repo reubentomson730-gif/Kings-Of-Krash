@@ -985,13 +985,16 @@ MonoBehaviour:
   accelPoints:
   - {fileID: 1451337672}
   - {fileID: 181603823}
-  restLength: 1
-  wheelRadius: 3
+  restLength: 2
+  wheelRadius: 1.94
   springStrength: 20000
   damperStrength: 10000
-  acceleration: 0
-  topSpeed: 0
+  acceleration: 300
+  topSpeed: 30
   vehicleRb: {fileID: 5448927039012181705}
+  gripFactor: 0.1
+  turnStrength: 20
+  maxSteerAngle: 30
 --- !u!54 &5448927039012181705
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1003,7 +1006,7 @@ Rigidbody:
   m_Mass: 1000
   m_LinearDamping: 0
   m_AngularDamping: 0.05
-  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_CenterOfMass: {x: 0, y: 0.1, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
   m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
   m_IncludeLayers:
@@ -1012,7 +1015,7 @@ Rigidbody:
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 0
-  m_ImplicitCom: 1
+  m_ImplicitCom: 0
   m_ImplicitTensor: 1
   m_UseGravity: 1
   m_IsKinematic: 0
